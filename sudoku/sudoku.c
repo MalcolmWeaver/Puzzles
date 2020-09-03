@@ -1,3 +1,6 @@
+
+// Malcolm heres
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -21,11 +24,11 @@ int check_sudoku(int sudoku[9][9])
    *  This function checks whether a Sudoku is properly
    * solved. That means that each row, column, and
    * 3x3 subgrid uses each digit only once.
-   * 
+   *
    *  If *ignores* zeros, so you can use it to check
    * that a partial solution is valid
    */
-  
+
   /*****
    * TO DO:
    * Complete this function
@@ -86,7 +89,7 @@ int solved(int sudoku[9][9])
    * It returns 1 if the Sudoku is solved, zero
    * otherwise
    */
-  
+
   /*****
    * TO DO
    * Complete this function
@@ -94,7 +97,7 @@ int solved(int sudoku[9][9])
    *   You can solve the Sudoku without using this function,
    * or you can write a different helper function, whatever
    * makes more sense to yoU! our checker won't look at this
-   * function, 
+   * function,
    * ****/
   for (int row=0; row<9; row++) {
     for (int col=0; col<9; col++) {
@@ -301,21 +304,21 @@ void solve_sudoku(int sudoku[9][9], int depth)
    * are not yet decided. If no solution exists
    * the function returns the input array *exactly
    * as it was* when the function was called.
-   * 
+   *
    * The 'depth' parameter is provided in case you
    * want to use it to help debug and trace your
    * code. You do not need to use it if you don't
    * want to, and the problem can be solved without
-   * using the depth value at all. 
-   * 
+   * using the depth value at all.
+   *
    * The automated checker won't look at the depth
    * either.
    */
-  
+
   /*****
    * TO DO:
    * Complete this function
-   *****/  
+   *****/
 
   int pos[9][9][9];
   init_poss(sudoku, pos);
@@ -338,7 +341,7 @@ int main()
    // from the Wiki, so you can check your output.
    // But as always, be aware we will test your
    // solution on different Sudoku puzzles.
-  
+
 //    int Sudoku[9][9]={
 //          {5, 3, 0, 0, 7, 0, 0, 0, 0},
 //          {6, 0, 0, 1, 9, 5, 0, 0, 0},
@@ -377,12 +380,12 @@ int main()
 
   printf("Input puzzle is:\n");
   print_sudoku(Sudoku);
-  
+
   solve_sudoku(Sudoku,0);
-  
+
   printf("Solution is:\n");
   print_sudoku(Sudoku);
-  
+
 }
 
 #endif
